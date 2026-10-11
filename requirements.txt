@@ -1,0 +1,24 @@
+# Dependencies of Intelligence-Customer-Service-Agent
+
+# ── AI / LLM ──────────────────────────────────────────────────────────────────
+anthropic==0.40.0          
+# LLM calls; the intent embedding branch supports remote clients with a local fallback when unavailable
+
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+python-multipart==0.0.12    # File upload support for FastAPI
+
+# ── Data Storage ──────────────────────────────────────────────────────────────
+redis==5.2.1
+chromadb==0.5.23           # Vector database (for long-term memory)
+
+# ── Monitoring ────────────────────────────────────────────────────────────────
+prometheus-client==0.21.1
+
+# ── HTTP Client ───────────────────────────────────────────────────────────────
+httpx==0.28.1              # Webhook alerts in monitor/performance_monitor.py
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
